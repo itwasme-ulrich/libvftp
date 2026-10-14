@@ -1,0 +1,36 @@
+# Doxygen configuration for libvftp. `make docs` (or `doxygen Doxyfile`) -> build/docs/html/index.html.
+# Mermaid diagrams in docs/*.md render with doxygen >= 1.18 (client side: the browser loads mermaid.js
+# from the CDN; for offline viewing set MERMAID_JS_URL to a local copy).
+PROJECT_NAME           = libvftp
+PROJECT_NUMBER         = 2.0
+PROJECT_BRIEF          = "Resumable file transfer for spacecraft and ground: burst + poll, transport and OS agnostic"
+OUTPUT_DIRECTORY       = build/docs
+OUTPUT_LANGUAGE        = English
+INPUT                  = README.md docs include/vftp port
+FILE_PATTERNS          = *.h *.md
+RECURSIVE              = YES
+USE_MDFILE_AS_MAINPAGE = README.md
+MARKDOWN_SUPPORT       = YES
+TOC_INCLUDE_HEADINGS   = 3
+OPTIMIZE_OUTPUT_FOR_C  = YES
+EXTRACT_ALL            = NO
+EXTRACT_STATIC         = NO
+HIDE_UNDOC_MEMBERS     = NO
+SORT_MEMBER_DOCS       = NO
+JAVADOC_AUTOBRIEF      = NO
+WARN_IF_UNDOCUMENTED   = YES
+WARN_IF_DOC_ERROR      = YES
+WARN_NO_PARAMDOC       = YES
+WARN_LOGFILE           = build/docs/warnings.log
+QUIET                  = YES
+GENERATE_HTML          = YES
+GENERATE_TREEVIEW      = YES
+GENERATE_LATEX         = NO
+HAVE_DOT               = NO
+MERMAID_RENDER_MODE    = CLIENT_SIDE
+SOURCE_BROWSER         = YES
+INLINE_SOURCES         = NO
+ENABLE_PREPROCESSING   = YES
+MACRO_EXPANSION        = NO
+PREDEFINED             = __cplusplus=0
+DISTRIBUTE_GROUP_DOC   = YES
